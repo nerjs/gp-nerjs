@@ -10,8 +10,8 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 
 
 
-const src = path.join(__dirname,'nerjs.github.io','src');
 const dirRoot = path.join(__dirname,'nerjs.github.io')
+const src = path.join(__dirname,'src');
 
 
 const conf = {

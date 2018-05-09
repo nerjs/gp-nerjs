@@ -1,0 +1,20 @@
+#page {
+	outline: 1px solid orange;
+	width: 100%;
+	margin: 29px 0 1px 0;
+	display: flex;
+	z-index: 1;
+
+
+	@media (--media-sm) {
+		margin-top: 30px;
+	}
+
+	@media (--media-md) {
+		margin-top: 33px;
+	}
+
+	@media (--media-lg) {
+		margin-top: 35px;
+	}
+}

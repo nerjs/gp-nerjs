@@ -1,0 +1,216 @@
+@keyframes start {
+	0% {
+		width : 100px;
+		height : 100px;
+		border-radius: 50%;
+		margin: 0px 0px 0px -50px;
+		bottom: 100%;
+		left: 0%;
+	}
+
+	40% {
+		bottom: 0%;
+		left: 25%;
+		margin: 0px 0px 0px -50px;
+	}
+
+	75% {
+		width : 100px;
+		height : 100px;
+		bottom: 100%;
+		left: 50%;
+		margin: 0px 0px -100px -50px;
+		border-radius: 50px;
+	}
+
+	100% {
+		width: 80%;
+		height: 50px;
+		margin: 0px 0px -70px -50px;
+		left: 10%;
+		border-radius: 5px;
+	}
+}
+
+@keyframes opas {
+	50% {
+		opacity : 1;
+	}
+
+	100% {
+		opacity: 0
+	}
+}
+@keyframes opas2 {
+	50% {
+		opacity : 0;
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+@keyframes close {
+	0% {
+		width: 80%;
+		left: 10%;
+		margin: 0;
+		border-radius: 5px;
+	}
+
+	5% {
+		width: 100px;
+		height: 50px;
+		left: 50%;
+		bottom: 100%;
+		margin: 0 0 -60px -50px;
+		border-radius: 50px;
+	}
+
+	10% {
+		height: 100px;
+		margin: 0 0 -110px -50px;
+	}
+
+	50% {
+		bottom: 50%;
+		left: 100%;
+		margin: 0 0 -50px -100px;
+	}
+
+	80% {
+		bottom: 0%;
+		left: 50%;
+		margin: 0 0 0px -50px;
+	}
+
+	100% {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		bottom: 50%;
+		left: 0%;
+		margin: 0 0 -50px -100px;
+	}
+}
+
+@keyframes reset {
+	0% {
+		width: 80%;
+		left: 10%;
+		margin: 0;
+		border-radius: 5px;
+	}
+
+	5% {
+		width: 100px;
+		height: 50px;
+		left: 50%;
+		bottom: 100%;
+		margin: 0 0 -60px -50px;
+		border-radius: 50px;
+	}
+
+	10% {
+		height: 100px;
+		margin: 0 0 -110px -50px;
+	}
+
+	50% {
+		bottom: 50%;
+		left: 0%;
+		margin: 0 -100px -50px 0;
+	}
+
+	80% {
+		bottom: 0%;
+		left: 50%;
+		margin: 0 0 0px -50px;
+	}
+
+	100% {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		bottom: 50%;
+		left: 100%;
+		margin: 0 -100px -50px 0;
+	}
+}
+
+
+
+.test {
+	background-color: #fff;
+	font-size: 15px;
+
+	&.main {
+		position: relative;
+		width: 80%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		overflow: auto;
+		margin: 5px auto;
+		padding: 4px 5px;
+		border-radius: 5px;
+		box-shadow: 0 0 5px 1px #fff, inset 0 0 4px #000;
+
+		&:hover {
+			box-shadow: 0 0 3px 1px #000, inset 0 0 2px #000;
+
+		}
+	}
+
+	&.start:before,
+	&.close-test:before,
+	&.reset:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: #fff;
+	}
+
+	&.close-test:before,
+	&.reset:before {
+		animation: opas2 1s linear;
+	}
+
+	&.start {
+		position: fixed;
+		width: 100px;
+		height: 100px;
+		/* margin-left: -50%; */
+		border-radius: 50%;
+		box-shadow: 0 0 3px 1px #000;
+		overflow: hidden;
+		animation: start 1s linear;
+
+		&:before {
+			animation: opas 1s linear;
+		}
+	}
+
+	&.close-test,
+	&.reset {
+		position: fixed;
+		width: 80%;
+		left: 10%;
+		overflow: hidden;
+	}
+
+	&.close-test {
+		animation: close 1s linear;
+	}
+
+	&.reset {
+		animation: reset 1s linear;	
+	}
+
+}
