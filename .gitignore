@@ -1,0 +1,11 @@
+.DS_Store
+*.log
+node_modules
+dist
+lib
+es
+coverage
+.npmignore
+package-lock.json
+src/glob.js
+nerjs.github.io
